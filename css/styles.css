@@ -16,10 +16,52 @@ body {
     margin: 0;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 8px;
+}
+
+.quote {
+    position: absolute;
+    z-index: 1;
+    margin: 0 20px;
+    cursor: pointer;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 0.4s 0.4s;
+}
+
+.quote.show {
+    opacity: 1;
+    transition: opacity 3s 3s;
+}
+
+.quote:hover {
+    text-decoration: underline;
+}
+
 .box {
+    position: relative;
+    z-index: 2;
     background-color: #1e1e1e;
     width: 700px;
-    height: 500px;
+    height: 100%;
+    max-height: 500px;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.box.max {
+    width: 100%;
+    max-height: 100%;
+}
+
+.box.exit {
+    width: 0;
+    height: 0;
 }
 
 .box__header {
@@ -44,13 +86,20 @@ body {
     width: 18px;
     height: 18px;
     margin: 4px;
-    background-color: #1e1e1e;
+    background-color: #2e2e2e;
     border-radius: 18px;
     border: 0;
+}
+
+.circle:focus {
+    outline: none;
+}
+
+.circle.active {
     cursor: pointer;
 }
 
-.red {
+.red.active {
     background-color: #da3843;
 }
 
@@ -62,11 +111,11 @@ body {
     box-shadow: 0px 0px 30px 12px rgba(210,34,45,.3);
 }
 
-.amber {
+.amber.active {
     background-color: #f7c942;
 }
 
-.amber:hover {
+.amber.active:hover {
     background-color: #ffbf00;
 
     -webkit-box-shadow: 0px 0px 30px 12px rgba(255,191,0,.3);
@@ -74,14 +123,27 @@ body {
     box-shadow: 0px 0px 30px 12px rgba(255,191,0,.3);
 }
 
-.green {
+.green.active {
     background-color: #358f35;
 }
 
-.green:hover {
+.green.active:hover {
     background-color: #238823;
 
     -webkit-box-shadow: 0px 0px 30px 12px rgba(35,136,35,.3);
     -moz-box-shadow: 0px 0px 30px 12px rgba(35,136,35,.3);
     box-shadow: 0px 0px 30px 12px rgba(35,136,35,.3);
+}
+
+.box__content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 700px;
+    line-height: 1.6;
+    opacity: 0;
+}
+
+.box__content.show {
+    opacity: 1;
+    transition: opacity 0.2s 0.4s;
 }
