@@ -1,0 +1,15 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background-color: #252526;
+    color: #d4d4d4;
+    letter-spacing: .5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
