@@ -5,11 +5,83 @@ html {
 body {
     font-family: 'Inconsolata', monospace;
     background-color: #252526;
+    background-color: rgb(15, 15, 15);
     color: #d4d4d4;
+
     letter-spacing: .5px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin: 0;
+}
+
+.box {
+    background-color: #1e1e1e;
+    width: 700px;
+    height: 500px;
+}
+
+.box__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3c3c3c;
+    height: 38px;
+    padding: 0 8px 0 20px;
+
+}
+
+.box__header p {
+    margin: 0;
+}
+
+.circles {
+    display: flex;
+}
+
+.circle {
+    width: 18px;
+    height: 18px;
+    margin: 4px;
+    background-color: #1e1e1e;
+    border-radius: 18px;
+    border: 0;
+    cursor: pointer;
+}
+
+.red {
+    background-color: #da3843;
+}
+
+.red:hover {
+    background-color: #d2222d;
+
+    -webkit-box-shadow: 0px 0px 30px 12px rgba(210,34,45,.3);
+    -moz-box-shadow: 0px 0px 30px 12px rgba(210,34,45,.3);
+    box-shadow: 0px 0px 30px 12px rgba(210,34,45,.3);
+}
+
+.amber {
+    background-color: #f7c942;
+}
+
+.amber:hover {
+    background-color: #ffbf00;
+
+    -webkit-box-shadow: 0px 0px 30px 12px rgba(255,191,0,.3);
+    -moz-box-shadow: 0px 0px 30px 12px rgba(255,191,05,.3);
+    box-shadow: 0px 0px 30px 12px rgba(255,191,0,.3);
+}
+
+.green {
+    background-color: #358f35;
+}
+
+.green:hover {
+    background-color: #238823;
+
+    -webkit-box-shadow: 0px 0px 30px 12px rgba(35,136,35,.3);
+    -moz-box-shadow: 0px 0px 30px 12px rgba(35,136,35,.3);
+    box-shadow: 0px 0px 30px 12px rgba(35,136,35,.3);
 }
