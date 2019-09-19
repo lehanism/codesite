@@ -4,6 +4,7 @@ var amber = document.getElementsByClassName('amber')[0];
 var red = document.getElementsByClassName('red')[0];
 var box = document.getElementsByClassName('box')[0];
 var content = document.getElementsByClassName('box__content')[0];
+var code = document.getElementsByClassName('code')[0];
 
 quote.addEventListener('click', function(){
     green.classList.add("active");
@@ -35,3 +36,8 @@ red.addEventListener('click', function(){
     quote.classList.add("show");
     content.classList.remove("show");
 });
+
+var codeArray = code.innerHTML.split(" ");
+
+console.log(codeArray);
+
